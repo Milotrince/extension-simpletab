@@ -1,0 +1,104 @@
+:root {
+  --main: #1e1e1e;
+  --main-l: 8%;
+  --contrast: white;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('../assets/fonts/Source_Code_Pro/SourceCodePro-Regular.ttf');
+}
+
+#background {
+  display: block;
+  background-color: var(--main);
+  background-image: url("../assets/backgrounds/none.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.25s, background-image 2s, background-color 1s;
+}
+
+body {
+  padding: 48px
+}
+
+body * {
+  font-family: 'Source Code Pro';
+  color: var(--contrast);
+  transition: color 1s;
+}
+
+.centered {
+  text-align: center;
+}
+
+#clock {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: 24px;
+  display: inline-block;
+}
+
+#clock * {
+  float: left;
+}
+
+.colon {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#notes {
+  font-size: 24px;
+  width: 85vw;
+  height: 50vh;
+  padding: 16px;
+  
+  background-color: hsla(0, 0%, var(--main-l), 0.2);
+  border: none;
+  resize: none;
+  transition: background-color 0.25s;
+}
+
+#notes:focus {
+  outline: none;
+  background-color: hsla(0, 0%, var(--main-l), 0.4);
+  resize: both;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button#options {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #00000000;
+  border: none;
+}
+
+.options {
+  font-size: 16px;
+}
+
+.options li {
+  list-style-type: none;
+}
+
+.options input {
+  color: black;
+  width: 300px;
+}
+
+.options button {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  margin-top: 16px;
+}
